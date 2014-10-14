@@ -20,7 +20,7 @@ public class Timetable {
     private Airport arrivalAirport,departureAirport;
     private Plane plane;
     
-    public Timetable(int id, Date arrivalDate, Date departureDate, float price, 
+    public Timetable(int id, Date arrivalDate, Date departureDate, double price, 
             Airport arrivalAirport,Airport departureAirport,Plane plane) {
         this.id = id;
         this.arrivalDate = arrivalDate;
