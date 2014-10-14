@@ -6,10 +6,34 @@
 
 package controller;
 
+import dto.ScheduleDTO;
+import entity.Airport;
+import java.util.Date;
+
 /**
  *
  * @author Paul
  */
-public class FlightManager {
+public class FlightManager 
+{
+    public FlightManager()
+    {
+        
+    }
     
+    public ScheduleDTO getFlightsOnDate(Date date, Airport departure, Airport arrival)
+    {
+        try
+        {
+            
+        }
+        catch(Exception e)
+        {
+            
+        }
+        finally
+        {
+           return null; 
+        }
+    }
 }
