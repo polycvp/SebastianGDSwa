@@ -8,6 +8,26 @@ and open the template in the editor.
     Author     : rvhaley
 */
 
-#headerTitle {
+table {
+    border-collapse: collapse;
+}
+
+div#headerDiv {
+    background-color: lightgray;
+    border-radius: 25px;
+    border-color: black;
+}
+
+div.pageTitleDiv {
+    background-color: gray;
+    border-radius: 25px;
+    width: 30%;
+}
+
+#scheduleTableHeader {
+    background-color: lightgray;
+}
+
+#headerTitle, #footerCreated {
     text-align: center;
 }

@@ -6,7 +6,9 @@
 
 <%@ include file="header.jsp" %>
 
-<h2>Index</h2>
+<div class="pageTitleDiv">
+    <h2> - Index - </h2>
+</div>
 <br />
 <br />
 <form action="/SebastianGDSwa/ViewSchedule">

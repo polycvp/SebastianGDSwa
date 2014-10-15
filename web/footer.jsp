@@ -5,5 +5,10 @@
 --%>
 
 
-    </body>
+<br />
+<br />
+<hr />
+<h4 id="footerCreated">&copy;  2014</h4>
+<hr />
+</body>
 </html>

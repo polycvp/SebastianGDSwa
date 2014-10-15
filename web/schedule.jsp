@@ -1,12 +1,14 @@
 <%-- 
-    Document   : home
+    Document   : schedule
     Created on : Oct 14, 2014, 6:43:57 PM
     Author     : rvhaley
 --%>
 
 <%@ include file="header.jsp" %>
 
-<h2> - Schedule - </h2>
+<div class="pageTitleDiv">
+    <h2> - Schedule - </h2>
+</div>
 <p>
     The following schedules are for flights between airport(${airport1}) and airport(${airport2}) on the date: ${date}.
 </p>
@@ -14,7 +16,7 @@
 <br />
 
 <table border="1">
-    <tr>
+    <tr id="scheduleTableHeader">
         <th>Departure Time</th>
         <th>Arrival Time</th>
         <th>Carrier Code</th>
@@ -33,5 +35,10 @@
         </tr>
     </c:forEach>
 </table>
+
+<br />
+<br />
+
+<a href="index.jsp">Back</a>
 
 <%@ include file="footer.jsp" %>

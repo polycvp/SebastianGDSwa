@@ -21,6 +21,10 @@
     </head>
     <body>
         <br />
-        <h1 id="headerTitle">Sebastian: Global Distribution System</h1>
+        <div id="headerDiv">
+            <br />
+            <h1 id="headerTitle">Sebastian: Global Distribution System</h1>
+            <br />
+        </div>
         <br />
 
