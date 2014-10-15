@@ -8,6 +8,8 @@ package controller;
 
 import dto.ScheduleDTO;
 import entity.Airport;
+import entity.DbContext;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -15,17 +17,21 @@ import java.util.List;
  *
  * @author Paul
  */
-public class FlightManager 
+public class FlightManager extends AbstractController
 {
+    private List<ScheduleDTO> timeSchedules;
+    
     public FlightManager()
     {
-        
+        timeSchedules = new ArrayList<ScheduleDTO>();
     }
     
     public List<ScheduleDTO> getFlightsOnDate(Date date, Airport departure, Airport arrival)
     {
+        
         try
         {
+            DbContext db = new DbContext();
             
         }
         catch(Exception e)
@@ -34,7 +40,7 @@ public class FlightManager
         }
         finally
         {
-           return null; 
+           return timeSchedules; 
         }
     }
 }
