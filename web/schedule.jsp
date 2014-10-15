@@ -12,7 +12,7 @@
 <p>
     The following schedules are for flights between airport(${airport1}) and airport(${airport2}) on the date: ${date}.
 </p>
-<br />
+
 <br />
 
 <table border="1">
@@ -20,7 +20,7 @@
         <th>Departure Time</th>
         <th>Arrival Time</th>
         <th>Carrier Code</th>
-        <th>Seats</th>
+        <th>Available Seats</th>
     </tr>
     <c:forEach var="schedule" items="${schedules}" varStatus="counter">
         <tr>

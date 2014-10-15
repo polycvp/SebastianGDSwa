@@ -19,17 +19,27 @@
 
     <br />
     <br />
+    <br />
 
-    <p>Date: <input type="text" name="date" id="datepicker" /></p>
+    <table border="1" cellpadding="5" cellspacing="5">
+        <tr>
+            <th class="scheduleTableSides">Date: </th>
+            <td><input type="text" name="date" id="datepicker" /></td>
+        </tr>
+        <tr>
+            <th class="scheduleTableSides">Starting Airport: </th>
+            <td><input type="text" name="airport1" /></td>
+        </tr>
+        <tr>
+            <th class="scheduleTableSides">Destination Airport: </th>
+            <td><input type="text" name="airport2" /></td>
+        </tr>
+    </table>
+    <!--p>Date: <input type="text" name="date" id="datepicker" /></p>
     <p>Airport 1: <input type="text" name="airport1" /></p>
-    <p>Airport 2: <input type="text" name="airport2" /></p>
+    <p>Airport 2: <input type="text" name="airport2" /></p-->
 </form>
 
-<script>
-    $(function() {
-        $("#datepicker").datepicker(
-                {dateFormat: 'dd/mm/yy'});
-    });
-</script>
+<script src="js/index.js" type="text/javascript"></script>
 
 <%@ include file="footer.jsp" %>

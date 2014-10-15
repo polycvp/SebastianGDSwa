@@ -12,6 +12,11 @@ table {
     border-collapse: collapse;
 }
 
+.scheduleTableSides {
+    text-align: left;
+    background-color: lightgray;
+}
+
 div#headerDiv {
     background-color: lightgray;
     border-radius: 25px;
