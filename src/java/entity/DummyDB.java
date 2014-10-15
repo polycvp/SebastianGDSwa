@@ -50,7 +50,7 @@ public class DummyDB {
         timetable.add(new Timetable(5,datepickerStringToDate("17/10/2014"), datepickerStringToDate("18/10/2014"),109,airport.get(1), airport.get(4), planes.get(2)));
         timetable.add(new Timetable(6,datepickerStringToDate("19/10/2014"), datepickerStringToDate("20/10/2014"),98,airport.get(7), airport.get(8), planes.get(1)));
         timetable.add(new Timetable(7,datepickerStringToDate("30/10/2014"), datepickerStringToDate("31/10/2014"),350,airport.get(8), airport.get(1), planes.get(0)));
-        timetable.add(new Timetable(8,datepickerStringToDate("20/10/2014"), datepickerStringToDate("26/10/2014"),783,airport.get(5), airport.get(0), planes.get(0)));
+        timetable.add(new Timetable(8,datepickerStringToDate("20/10/2014"), datepickerStringToDate("21/10/2014"),783,airport.get(5), airport.get(0), planes.get(0)));
         timetable.add(new Timetable(9,datepickerStringToDate("25/10/2014"), datepickerStringToDate("25/10/2014"),244,airport.get(3), airport.get(1), planes.get(4)));
     
     }

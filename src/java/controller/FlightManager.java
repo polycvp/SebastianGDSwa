@@ -11,6 +11,8 @@ import entity.Airport;
 import entity.DbContext;
 import entity.DummyDB;
 import entity.Timetable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -26,12 +28,28 @@ public class FlightManager extends AbstractController
     
     public FlightManager()
     {
-        timeSchedules = new ArrayList<ScheduleDTO>();
     }
     
-    public List<ScheduleDTO> getFlightsOnDate(Date departureDate, Airport departure, Airport arrival)
+    public List<ScheduleDTO> getFlightsOnDate(String date, String departure, String arrival)
     {
-        
+        timeSchedules = new ArrayList<ScheduleDTO>();
+        Date departureDate = null;
+        try {
+            departureDate = new SimpleDateFormat("dd-MM-yyyy").parse(date);
+            System.out.println(departureDate);
+        } catch (ParseException ex) {
+            ex.printStackTrace();
+        }
+        try {
+            // Some dummy data to test JSP page with
+            timeSchedules.add(new ScheduleDTO(new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":06:00:00"), new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":10:00:00"), "AIR123", 34));
+            timeSchedules.add(new ScheduleDTO(new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":08:00:00"), new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":12:00:00"), "AIR123", 34));
+            timeSchedules.add(new ScheduleDTO(new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":12:00:00"), new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":16:00:00"), "AIR123", 34));
+            timeSchedules.add(new ScheduleDTO(new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":14:00:00"), new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":18:00:00"), "AIR123", 34));
+            timeSchedules.add(new ScheduleDTO(new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":16:00:00"), new SimpleDateFormat("dd-MM-yy:HH:mm:SS").parse(date + ":20:00:00"), "AIR123", 34));
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
         try
         {
             DbContext context = new DbContext();
@@ -42,11 +60,13 @@ public class FlightManager extends AbstractController
             */
             for (Timetable t : timetables)
             {
-                if(isOnSameDepartureDate(departureDate, t.getDepartureDate()))
+                if(isOnSameDepartureDate(departureDate, t.getDepartureDate()) 
+                        && t.getDepartureAirport().getCode().equalsIgnoreCase(departure)
+                        && t.getArrivalAirport().getCode().equalsIgnoreCase(arrival))
                 {
                     timeSchedules.add(
                             new ScheduleDTO(
-                                    departureDate, t.getArrivalDate(), t.getPlane().getCarrier().getCarrierCode(),
+                                    t.getDepartureDate(), t.getArrivalDate(), t.getPlane().getCarrier().getCarrierCode(),
                                     t.getPlane().getNoOfSeats()));
                 }
             }
