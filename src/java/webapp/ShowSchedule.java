@@ -9,6 +9,7 @@ package webapp;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,10 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Paul
  */
+@WebServlet(name = "ShowSchedule", urlPatterns =
+{
+    "/ShowSchedule"
+})
 public class ShowSchedule extends HttpServlet {
 
     /**
@@ -25,7 +30,8 @@ public class ShowSchedule extends HttpServlet {
      *
      * @param request servlet request
      * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
+     * @throws ServletException if a se
+     * rvlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
