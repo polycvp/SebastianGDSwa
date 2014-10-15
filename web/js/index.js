@@ -6,4 +6,6 @@ $(function() {
         minDate: dateToday
     }
     );
+    
+    $("#scheduleSelect").button();
 });

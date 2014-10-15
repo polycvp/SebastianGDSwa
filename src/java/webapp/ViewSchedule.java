@@ -8,7 +8,6 @@ package webapp;
 import dto.ScheduleDTO;
 import facade.WAFacade;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -30,6 +29,9 @@ public class ViewSchedule extends HttpServlet {
         RequestDispatcher dis = null;
         if (findKey(request) != null) {
             switch (findKey(request)) {
+                case "select":
+                    dis = request.getRequestDispatcher("selectSchedule.jsp");
+                    break;
                 case "schedule":
                     dis = request.getRequestDispatcher("schedule.jsp");
                     WAFacade waFacade = new WAFacade();

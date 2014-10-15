@@ -11,20 +11,33 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sebastian: Global Distribution System</title>
+
+        <title>Sebastian: GDS</title>
 
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/pepper-grinder/jquery-ui.css"/>
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/smoothness/jquery-ui.css"/>
 
-        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="fonts/fonts.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/main.js" type="text/javascript"></script>
     </head>
     <body>
+
         <br />
         <div id="headerDiv">
             <br />
             <h1 id="headerTitle">Sebastian: Global Distribution System</h1>
             <br />
         </div>
+        <br />
+        <div id="navDiv">
+            <a href="/SebastianGDSwa/ViewSchedule?command=select" class="anchorButtons">View Schedule</a>
+            <a href="#" class="anchorButtons">Make Booking</a>
+            <a href="#" class="anchorButtons">View Booking</a>
+            <a href="#" class="anchorButtons">Cancel Booking</a>
+        </div>
+        <br />
+        <br />
         <br />
 

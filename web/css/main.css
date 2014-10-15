@@ -21,10 +21,11 @@ div#headerDiv {
     background-color: lightgray;
     border-radius: 25px;
     border-color: black;
+    box-shadow: 10px 10px 5px grey;
 }
 
 div.pageTitleDiv {
-    background-color: gray;
+    background-color: lightgray;
     border-radius: 25px;
     width: 30%;
 }
@@ -33,6 +34,10 @@ div.pageTitleDiv {
     background-color: lightgray;
 }
 
-#headerTitle, #footerCreated {
+#headerTitle, #footerCreated, #navDiv {
     text-align: center;
+}
+
+#headerTitle, .pageTitle {
+    font-family: lintelregular;
 }

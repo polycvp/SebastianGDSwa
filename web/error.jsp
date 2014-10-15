@@ -16,6 +16,6 @@
 <br />
 <br />
 
-<a href="index.jsp">Back</a>
+<a href="index.jsp" class="anchorButtons">Home</a>
 
 <%@ include file="footer.jsp" %>

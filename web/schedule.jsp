@@ -7,7 +7,7 @@
 <%@ include file="header.jsp" %>
 
 <div class="pageTitleDiv">
-    <h2> - Schedule - </h2>
+    <h2 class="pageTitle"> - Schedule - </h2>
 </div>
 <p>
     The following schedules are for flights between airport(${airport1}) and airport(${airport2}) on the date: ${date}.
@@ -39,6 +39,6 @@
 <br />
 <br />
 
-<a href="index.jsp">Back</a>
+<a href="index.jsp" class="anchorButtons">Home</a>
 
 <%@ include file="footer.jsp" %>
