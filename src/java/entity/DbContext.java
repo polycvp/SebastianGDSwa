@@ -9,6 +9,7 @@ package entity;
 /**
  *
  * @author Paul
+ * this class will handle the connection
  */
 public class DbContext {
     
