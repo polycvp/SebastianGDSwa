@@ -23,11 +23,11 @@
         </tr>
         <tr>
             <th class="scheduleTableSides">Starting Airport: </th>
-            <td><input type="text" name="airport1" /></td>
+            <td><input type="text" id="airport1" name="airport1" /></td>
         </tr>
         <tr>
             <th class="scheduleTableSides">Destination Airport: </th>
-            <td><input type="text" name="airport2" /></td>
+            <td><input type="text" id="airport2" name="airport2" /></td>
         </tr>
     </table>
     
@@ -38,5 +38,6 @@
 </form>
 
 <script src="js/index.js" type="text/javascript"></script>
+<script src="js/airportCodes.js" type="text/javascript"></script>
 
 <%@ include file="footer.jsp" %>
