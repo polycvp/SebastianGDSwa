@@ -7,13 +7,16 @@
 <%@ include file="header.jsp" %>
 
 <h2> - Schedule - </h2>
+<p>
+    The following schedules are for flights between airport(${airport1}) and airport(${airport2}) on the date: ${date}.
+</p>
 <br />
 <br />
 
 <table border="1">
     <tr>
-        <th>Departure</th>
-        <th>Arrival</th>
+        <th>Departure Time</th>
+        <th>Arrival Time</th>
         <th>Carrier Code</th>
         <th>Seats</th>
     </tr>

@@ -41,8 +41,11 @@ public class ViewSchedule extends HttpServlet {
                     List<ScheduleDTO> schedules = waFacade.getFlightsOnDate(date, airport1, airport2);
                     
                     request.setAttribute("schedules", schedules);
+                    request.setAttribute("date", date);
+                    request.setAttribute("airport1", airport1);
+                    request.setAttribute("airport2", airport2);
                     
-                    System.out.println(date + " " + airport1 + " " + airport2);
+//                    System.out.println(date + " " + airport1 + " " + airport2);
                     break;
                 default:
                     dis = request.getRequestDispatcher("error.jsp");

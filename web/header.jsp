@@ -11,16 +11,16 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Sebastian GDS</title>
+        <title>Sebastian: Global Distribution System</title>
 
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
-        <link rel="stylesheet" href="/resources/demos/style.css">
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/pepper-grinder/jquery-ui.css"/>
+
+        <link rel="stylesheet" href="css/main.css">
     </head>
     <body>
         <br />
-        <br />
-        <h1>Sebastian GDS</h1>
-        <br />
+        <h1 id="headerTitle">Sebastian: Global Distribution System</h1>
         <br />
 
