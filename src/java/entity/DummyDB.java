@@ -31,8 +31,16 @@ public class DummyDB {
         planes.add(new Plane(2,10));
         planes.add(new Plane(3,15));
         planes.add(new Plane(4,17));
-        timetable.add(new Timetable(1,datepickerStringToDate("15/10/2014"), datepickerStringToDate("16/10/2014"),250,
-                airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(1,datepickerStringToDate("20/10/2014"), datepickerStringToDate("21/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(2,datepickerStringToDate("19/10/2014"), datepickerStringToDate("19/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(3,datepickerStringToDate("30/10/2014"), datepickerStringToDate("30/11/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(4,datepickerStringToDate("17/10/2014"), datepickerStringToDate("17/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(5,datepickerStringToDate("17/10/2014"), datepickerStringToDate("18/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(6,datepickerStringToDate("19/10/2014"), datepickerStringToDate("20/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(7,datepickerStringToDate("30/10/2014"), datepickerStringToDate("31/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(8,datepickerStringToDate("20/10/2014"), datepickerStringToDate("26/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+        timetable.add(new Timetable(9,datepickerStringToDate("25/10/2014"), datepickerStringToDate("25/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
+    
     }
     
     private Date datepickerStringToDate(String date) {
