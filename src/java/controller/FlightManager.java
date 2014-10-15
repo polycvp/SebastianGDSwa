@@ -29,7 +29,7 @@ public class FlightManager
         }
         catch(Exception e)
         {
-            
+            e.printStackTrace();
         }
         finally
         {
