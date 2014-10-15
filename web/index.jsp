@@ -16,7 +16,8 @@
         <link rel="stylesheet" href="/resources/demos/style.css">
         <script>
             $(function() {
-                $("#datepicker").datepicker();
+                $("#datepicker").datepicker(
+                        {dateFormat: 'dd/mm/yy'});
             });
         </script>
     </head>
@@ -29,6 +30,9 @@
             <input type="submit" name="bookingButton" value="Make Booking" />
             <input type="submit" name="viewButton" value="See a Booking" />
             <input type="submit" name="cancelButton" value="Cancel a Booking" />
+            
+            <br />
+            <br />
 
             <p>Date: <input type="text" name="date" id="datepicker" /></p>
             <p>Airport 1: <input type="text" name="airport1" /></p>

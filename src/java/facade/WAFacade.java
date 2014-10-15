@@ -7,6 +7,11 @@ package facade;
 
 import controller.FlightManager;
 import dto.ScheduleDTO;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,6 +26,12 @@ public class WAFacade {
     }
 
     public ScheduleDTO getFlightsOnDate(String date, String airport1, String airport2) {
+        try {
+            Date parse = new SimpleDateFormat("dd/MM/yyyy").parse(date);
+            System.out.println(parse);
+        } catch (ParseException ex) {
+            Logger.getLogger(WAFacade.class.getName()).log(Level.SEVERE, null, ex);
+        }
         return null;
     }
 }

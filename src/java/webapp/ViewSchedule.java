@@ -5,6 +5,7 @@
  */
 package webapp;
 
+import facade.WAFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -37,10 +38,13 @@ public class ViewSchedule extends HttpServlet {
             switch (findKey(request)) {
                 case "schedule":
                     dis = request.getRequestDispatcher("schedule.jsp");
+                    WAFacade waFacade = new WAFacade();
                     
                     String date = request.getParameter("date");
                     String airport1 = request.getParameter("airport1");
                     String airport2 = request.getParameter("airport2");
+                    
+                    waFacade.getFlightsOnDate(date, airport1, airport2);
                     
                     System.out.println(date + " " + airport1 + " " + airport2);
                     break;
