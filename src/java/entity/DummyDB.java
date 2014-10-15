@@ -24,9 +24,9 @@ public class DummyDB {
     private FlightCarrier flightCarrier;
     
     public DummyDB() {
-        flightCarrier = new FlightCarrier("N3");
-        airport.add(new Airport(1,"MOW123","GMT+3"));
-        airport.add(new Airport(2,"FNJ111","GMT+9"));
+        flightCarrier = new FlightCarrier("OX");
+        airport.add(new Airport(1,"CPH","GMT+3"));
+        airport.add(new Airport(2,"LAX","GMT+9"));
         planes.add(new Plane(1,20));
         planes.add(new Plane(2,10));
         planes.add(new Plane(3,15));

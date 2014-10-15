@@ -9,6 +9,7 @@ package controller;
 import dto.ScheduleDTO;
 import entity.Airport;
 import java.util.Date;
+import java.util.List;
 
 /**
  *
@@ -21,7 +22,7 @@ public class FlightManager
         
     }
     
-    public ScheduleDTO getFlightsOnDate(Date date, Airport departure, Airport arrival)
+    public List<ScheduleDTO> getFlightsOnDate(Date date, Airport departure, Airport arrival)
     {
         try
         {
