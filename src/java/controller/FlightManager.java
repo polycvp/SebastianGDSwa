@@ -12,6 +12,7 @@ import entity.DbContext;
 import entity.DummyDB;
 import entity.Timetable;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -35,19 +36,44 @@ public class FlightManager extends AbstractController
         {
             DbContext context = new DbContext();
             DummyDB em = context.getEntityManager();
-            ArrayList<Timetable> timetable = em.getTimetable();
+            ArrayList<Timetable> timetables = em.getTimetable();
             /*here process the timetable array into a scheduleDTO validate it with the 
             required criteria departureDate, departure and arrival and pass it forward
             */
-            
+            for (Timetable t : timetables)
+            {
+                if(isOnSameDepartureDate(departureDate, t.getDepartureDate()))
+                {
+                    timeSchedules.add(
+                            new ScheduleDTO(
+                                    departureDate, t.getArrivalDate(), t.getPlane().getCarrier().getCarrierCode(),
+                                    t.getPlane().getNoOfSeats()));
+                }
+            }
         }
         catch(Exception e)
         {
             e.printStackTrace();
         }
-        finally
+        return timeSchedules;
+    }
+    
+    private boolean isOnSameDepartureDate(Date first, Date second)
+    {
+        try
         {
-           return timeSchedules; 
+            Calendar cal1 = Calendar.getInstance();
+            cal1.setTime(first);
+            Calendar cal2 = Calendar.getInstance();
+            cal2.setTime(second);
+            
+            return cal1.get(Calendar.YEAR) == cal2.get(Calendar.YEAR) &&
+	                  cal1.get(Calendar.DAY_OF_YEAR) == cal2.get(Calendar.DAY_OF_YEAR);
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+            return false;
         }
     }
 }

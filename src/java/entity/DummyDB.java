@@ -24,7 +24,7 @@ public class DummyDB {
     private FlightCarrier flightCarrier;
     
     public DummyDB() {
-        flightCarrier = new FlightCarrier("OX");
+        flightCarrier = new FlightCarrier("HG");
         airport.add(new Airport(1,"CPH","GMT+3"));
         airport.add(new Airport(2,"LAX","GMT+9"));
         airport.add(new Airport(3,"BUD","GMT+2"));
@@ -35,14 +35,14 @@ public class DummyDB {
         airport.add(new Airport(8,"MUC","GMT+2"));
         airport.add(new Airport(9,"PHX","GMT-11"));
         airport.add(new Airport(10,"MIA","GMT-9"));
-        planes.add(new Plane(1,20));
-        planes.add(new Plane(2,10));
-        planes.add(new Plane(3,15));
-        planes.add(new Plane(4,17));
-        planes.add(new Plane(5,56));
-        planes.add(new Plane(6,34));
-        planes.add(new Plane(7,41));
-        planes.add(new Plane(8,35));
+        planes.add(new Plane(123,20,flightCarrier));
+        planes.add(new Plane(252,10,flightCarrier));
+        planes.add(new Plane(385,15,flightCarrier));
+        planes.add(new Plane(410,17,flightCarrier));
+        planes.add(new Plane(935,56,flightCarrier));
+        planes.add(new Plane(677,34,flightCarrier));
+        planes.add(new Plane(704,41,flightCarrier));
+        planes.add(new Plane(862,35,flightCarrier));
         timetable.add(new Timetable(1,datepickerStringToDate("20/10/2014"), datepickerStringToDate("21/10/2014"),250,airport.get(0), airport.get(1), planes.get(2)));
         timetable.add(new Timetable(2,datepickerStringToDate("19/10/2014"), datepickerStringToDate("19/10/2014"),150,airport.get(1), airport.get(2), planes.get(3)));
         timetable.add(new Timetable(3,datepickerStringToDate("30/10/2014"), datepickerStringToDate("30/11/2014"),215,airport.get(0), airport.get(0), planes.get(5)));

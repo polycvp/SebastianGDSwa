@@ -12,19 +12,31 @@ package entity;
  */
 public class Plane {
     
-    private int id,noOfSeats;
+    private String name;
+    private int noOfSeats;
+    private FlightCarrier carrier;
     
-    public Plane(int id,int noOfSeats) {
-        this.id = id;
+    public Plane(int id,int noOfSeats,FlightCarrier carrier) {
+        // id has to have three digits
+        this.name = carrier.getCarrierCode()+id;
         this.noOfSeats = noOfSeats;
+        this.carrier = carrier;
     }
 
-    public int getId() {
-        return id;
+    public String getName() {
+        return name;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setName(int id) {
+        this.name = carrier.getCarrierCode()+id;
+    }
+
+    public FlightCarrier getCarrier() {
+        return carrier;
+    }
+
+    public void setCarrier(FlightCarrier carrier) {
+        this.carrier = carrier;
     }
 
     public int getNoOfSeats() {
