@@ -5,9 +5,11 @@
  */
 package webapp;
 
+import dto.ScheduleDTO;
 import facade.WAFacade;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -20,15 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  */
 public class ViewSchedule extends HttpServlet {
 
-    /**
-     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
-     * methods.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -44,7 +38,9 @@ public class ViewSchedule extends HttpServlet {
                     String airport1 = request.getParameter("airport1");
                     String airport2 = request.getParameter("airport2");
                     
-                    waFacade.getFlightsOnDate(date, airport1, airport2);
+                    List<ScheduleDTO> schedules = waFacade.getFlightsOnDate(date, airport1, airport2);
+                    
+                    request.setAttribute("schedules", schedules);
                     
                     System.out.println(date + " " + airport1 + " " + airport2);
                     break;
